@@ -5,7 +5,6 @@ RUN gem install middleman
 RUN apt-get install -y git
 
 # middleman routine
-ENV DMLANG jp
 WORKDIR work
 RUN mkdir /root/.ssh
 RUN chmod 700 /root/.ssh
@@ -16,6 +15,7 @@ WORKDIR DiscoverMeteorStatic
 RUN git submodule init
 RUN git submodule update --remote
 RUN bundle install
+ENV DMLANG jp
 ADD DiscoverMeteor_Jp/*  /work/DiscoverMeteorStatic/source/chapters/jp/
 WORKDIR chapters/sources/jp
 EXPOSE 4567
