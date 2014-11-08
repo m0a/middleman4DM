@@ -14,7 +14,7 @@ ssh -f -N -L 4567:localhost:4567 docker@$(boot2docker ip)
 ./run_middleman.sh
 ```
 
-http://localhost:4567 でアクセスできるはずです。
+[http://localhost:4567](http://localhost:4567) でアクセスできるはずです。
 
 
 
