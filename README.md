@@ -20,6 +20,11 @@ git rm -rf DiscoverMeteor_Ja
 git submodule add <あなたのforkしたDiscoverMeteor_Ja>
 git submodule update --remote
 
+#本家から取得するためにremote addする
+cd DiscoverMeteor_Ja
+git remote add dm git@github.com:DiscoverMeteor/DiscoverMeteor_Ja.git
+
+
 #ポートフォワード設定（passはデフォルトならtcuser）
 ssh -f -N -L 4567:localhost:4567 docker@$(boot2docker ip)
 
@@ -29,3 +34,13 @@ ssh -f -N -L 4567:localhost:4567 docker@$(boot2docker ip)
 ```
 
 [http://localhost:4567](http://localhost:4567) でアクセスできるはずです。
+
+##普段の手順
+
+```sh
+
+#移動と更新
+cd middleman4DM/DiscoverMeteor_Ja
+
+
+```
