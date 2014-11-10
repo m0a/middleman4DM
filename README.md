@@ -16,6 +16,7 @@ git clone git@github.com:m0a/middleman4DM.git
 cd middleman4DM
 
 #既存のサブモジュールを削除し自分のリポジトリに変更します
+git submodule deinit -f DiscoverMeteor_Ja
 git rm -rf DiscoverMeteor_Ja
 git clone  <あなたのforkしたDiscoverMeteor_Ja>
 
