@@ -15,14 +15,15 @@ OSX(yosemite)だと、結局作れませんでしたので。
 git clone git@github.com:m0a/middleman4DM.git
 cd middleman4DM
 
-#既存のサブモジュールを削除します
+#既存のサブモジュールを削除し自分のリポジトリに変更します
 git rm -rf DiscoverMeteor_Ja
-git submodule add <あなたのforkしたDiscoverMeteor_Ja>
-git submodule update --remote
+git clone  <あなたのforkしたDiscoverMeteor_Ja>
 
 #本家から取得するためにremote addする
 cd DiscoverMeteor_Ja
 git remote add dm git@github.com:DiscoverMeteor/DiscoverMeteor_Ja.git
+＃本家から取り込み
+git pull dm  master
 
 
 #ポートフォワード設定（passはデフォルトならtcuser）
@@ -37,10 +38,23 @@ ssh -f -N -L 4567:localhost:4567 docker@$(boot2docker ip)
 
 ##普段の手順
 
+1. 本家から最新版を取得
 ```sh
-
 #移動と更新
 cd middleman4DM/DiscoverMeteor_Ja
-
+＃本家から取り込み
+git pull dm  master
 
 ```
+
+2. 編集作業を行う
+
+3. 編集内容を自分のリポジトリへプッシュ
+```
+git add <対象ファイル>
+git commit -m "編集内容概略"
+git push
+```
+
+
+4. 自分のリポジトリのページに飛んでプルリクエストを作成
