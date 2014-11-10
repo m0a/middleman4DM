@@ -13,7 +13,7 @@ OSX(yosemite)だと、結局作れませんでしたので。
 
 ```sh
 
-＃本環境をクローンします
+#本環境をクローンします
 git clone git@github.com:m0a/middleman4DM.git
 cd middleman4DM
 
