@@ -16,6 +16,4 @@ RUN git submodule init
 RUN git submodule update --remote
 RUN bundle install
 ENV DMLANG jp
-#ADD DiscoverMeteor_Jp/*  /work/DiscoverMeteorStatic/source/chapters/jp/
-#WORKDIR chapters/sources/jp
-EXPOSE 4567
+ADD config.rb /work/DiscoverMeteorStatic/
