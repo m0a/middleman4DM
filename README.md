@@ -32,7 +32,7 @@ git pull dm  master
 #ポートフォワード設定（passはデフォルトならtcuser）
 ssh -f -N -L 4567:localhost:4567 docker@$(boot2docker ip)
 
-＃起動
+＃起動 初回だけすごく時間がかかります。
 ./run_middleman.sh
 
 ```
@@ -45,7 +45,7 @@ ssh -f -N -L 4567:localhost:4567 docker@$(boot2docker ip)
 ```sh
 #移動と更新
 cd middleman4DM/DiscoverMeteor_Ja
-＃本家から取り込み
+#本家から取り込み
 git pull dm  master
 
 ```

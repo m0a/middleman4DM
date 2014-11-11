@@ -16,4 +16,4 @@ WORKDIR DiscoverMeteorStatic
 #RUN git submodule update --remote
 RUN bundle install
 ENV DMLANG ja
-ADD config.rb /work/DiscoverMeteorStatic/
+#ADD config.rb /work/DiscoverMeteorStatic/
